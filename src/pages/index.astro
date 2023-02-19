@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+
+import '../styles/home.scss';
+
 ---
 
 <Layout 
@@ -11,8 +14,16 @@ import Layout from '../layouts/Layout.astro';
 	image=""
 >
 	<header>
-		<h1>LNP Group</h1>
-		<p>LNP Group is a group of online mediums owned and operated by Stelian Cioarec.</p>
+		<div class="background-image">
+			<img class="mobile-background">
+			<img class="tablet-background">
+			<img class="desktop-backround">
+		</div>
+		<div class="background-color"></div>
+		<div class="text">
+			<h1>LNP Group</h1>
+			<p>LNP Group is a group of online mediums owned and operated by Stelian Cioarec.</p>
+		</div>
 	</header>
 	<main class="brands">
 		<a href="" class="brand-link"></a>
