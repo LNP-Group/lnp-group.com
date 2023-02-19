@@ -6,6 +6,26 @@ import "../styles/menu.scss";
 
 <div class="menu">
     <div class="logo">
-        <img src="/images/lnp-group.svg" alt="LNP Group" />
+        <img src="/images/logos/lnp-group.svg" alt="LNP Group" />
     </div>
+    <button id="navbar-toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+    </button>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/projects">Projects</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
 </div>
+
+<script is:inline src="/scripts/menu.js"></script>

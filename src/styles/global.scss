@@ -1,0 +1,26 @@
+:root {
+    --font-family: "mendl-sans-dusk", sans-serif;
+    --light-weight: 300;
+    --regular-weight: 400;
+    --semi-bold-weight: 600;
+    --bold-weight: 700;
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: var(--regular-weight);
+}
+
+h1 {
+    font-weight: var(--bold-weight);
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: var(--semi-bold-weight);
+}
+

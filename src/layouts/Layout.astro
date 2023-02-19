@@ -1,4 +1,9 @@
 ---
+import Footer from '../components/Footer.astro';
+import Menu from '../components/Menu.astro';
+
+import '../styles/global.scss'
+
 export interface Props {
 	title: string;
 	description: string;
@@ -33,8 +38,11 @@ const { title, description, url, lang, image } = Astro.props;
 		<meta property="og:site_name" content={title} />
 		<meta property="og:locale" content={lang} />
 		<link rel="canonical" href={url} />
+		<link rel="stylesheet" href="https://use.typekit.net/xsr8mot.css">
 	</head>
 	<body>
+		<Menu />
 		<slot />
+		<Footer />
 	</body>
 </html>
