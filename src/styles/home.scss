@@ -1,7 +1,7 @@
 header {
-    height: 100svh;
-    height: 100dvh;
-    height: 100vh;
+    height: calc(100svh - var(--menu-height));
+    height: calc(100dvh - var(--menu-height));
+    height: calc(100vh - var(--menu-height));
     position: relative;
     display: flex;
     align-items: center;
