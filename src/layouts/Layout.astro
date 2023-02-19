@@ -1,9 +1,13 @@
 ---
 export interface Props {
 	title: string;
+	description: string;
+	url: string;
+	lang: string;
+	image: string;
 }
 
-const { title } = Astro.props;
+const { title, description, url, lang, image } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -11,25 +15,26 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/images/icons/icon.svg" />
+		<meta name="generator" content="LNP Group Website" />
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@LNP_Group" />
+		<meta name="twitter:creator" content="@LNP_Group" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={url} />
+		<meta property="og:site_name" content={title} />
+		<meta property="og:locale" content={lang} />
+		<link rel="canonical" href={url} />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
