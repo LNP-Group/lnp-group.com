@@ -64,9 +64,21 @@ header {
         text-decoration: none;
         color: #fff;
         font-size: 1.5rem;
+        border-radius: 3.25rem;
 
         img {
             width: 120px;
+            padding: 0.5em;
+            transform-origin: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:hover {
+           background:rgba(4, 0, 255, 0.5);
+
+           img {
+                transform: rotate(360deg);
+           }
         }
     }
 }
