@@ -110,3 +110,9 @@
   color: var(--clr);
   background: #333;
 }
+
+.card__back h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
