@@ -26,4 +26,22 @@ footer {
             width: 15rem;
         }
     }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        a {
+            margin: 0 0.5rem;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #0000ff;
+            }
+        }
+    }
 }
