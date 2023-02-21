@@ -75,6 +75,11 @@
 
 @media (min-width: 768px) {
     .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
         button {
             display: none;
         }
