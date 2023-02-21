@@ -44,7 +44,7 @@
     nav {
         display: flex;
         align-items: center;
-
+        z-index: 9999;
         display: none;
 
         ul {
@@ -58,6 +58,7 @@
             text-decoration: none;
             color: var(--color);
             font-weight: var(--bold-weight);
+            font-size: 1.25rem;
         }
     }
 
@@ -67,7 +68,7 @@
         top: var(--menu-height);
         left: 0;
         width: 100%;
-        height: var(--menu-height);
+        height: max-content;
         background-color: var(--background-color);
     }
 }
@@ -93,6 +94,7 @@
                     color: var(--color);
                     text-decoration: none;
                     font-weight: var(--bold-weight);
+                    font-size: 1.25rem;
                     transition: color .3s ease;
 
                     &::before {
@@ -129,6 +131,9 @@
 
                 a:hover {
                     color: var(--brand-color);
+                    -webkit-animation: glow 1s ease-in-out infinite alternate;
+                    -moz-animation: glow 1s ease-in-out infinite alternate;
+                    animation: glow 1s ease-in-out infinite alternate;
 
                     &::before {
                         transform: scale(1);
@@ -145,3 +150,12 @@
         }
     }
 }
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0400e6, 0 0 40px #0400e6, 0 0 50px #0400e6, 0 0 60px #0400e6, 0 0 70px #0400e6;
+    }
+    to {
+      text-shadow: 0 0 20px #9292ff, 0 0 30px #4d4dff, 0 0 40px #4d4dff, 0 0 50px #4d4dff, 0 0 60px #4d4dff, 0 0 70px #4d4dff, 0 0 80px #4d4dff;
+    }
+  }
