@@ -1,0 +1,33 @@
+---
+import FlipCard from '../components/FlipCard.astro';
+import Layout from '../layouts/Layout.astro';
+
+
+import '../styles/projects.scss';
+
+---
+
+<Layout 
+	title="Projects | LNP Group"
+	description="LNP Group is a group of online mediums owned and operated by Stelian Cioarec."
+	url="https://lnp-group.com/projects/"
+	lang="en-US"
+	image="/images/posters/desktop.png"
+>
+	<header>
+        <div class="background-gradient"></div>
+        <div class="background"></div>
+        <h1>Projects</h1>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="invisible"></div>
+    </header>
+    <main>
+        <FlipCard
+            title="LNP Group"
+            description="LNP Group is a group of online mediums owned and operated by Stelian Cioarec."
+            image="/images/posters/mobile.png"
+            image_alt="LNP Group"
+        />
+    </main>
+</Layout>
