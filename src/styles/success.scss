@@ -1,0 +1,75 @@
+header {
+    position: relative;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .background-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(0,212,255,1) 35%, rgba(9,9,121,1) 100%);
+        z-index: 100;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 150;
+    }
+
+    h1 {
+        z-index: 999;
+    }
+
+    .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: url("/images/styling/top.svg");
+        z-index: 180;
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: url("/images/styling/bottom.svg");
+        z-index: 180;
+    }
+
+    .invisible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 200;
+    }
+}
+
+main {
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    
+    p {
+        margin-bottom: 1rem;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+}

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+
+import '../styles/contact.scss';
+
+---
+
+
+<Layout 
+	title="Contact | LNP Group"
+	description="LNP Group is a group of online mediums owned and operated by Stelian Cioarec."
+	url="https://lnp-group.com/contact/"
+	lang="en-US"
+	image="/images/posters/desktop.png"
+>
+	<header>
+        <div class="background-gradient"></div>
+        <div class="background"></div>
+        <h1>Contact</h1>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="invisible"></div>
+    </header>
+    <main>
+        <div class="contact-form">
+            <form
+                action="/success"
+                method="POST"
+                data-netlify="true"
+            >
+                <div class="user">
+                    <div class="name">
+                        <label for="name">First Name</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                </div>
+                <div class="subject">
+                    <div class="subject-input">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" required />
+                    </div>
+                    <label for="department">Department</label>
+                    <select name="department" id="department" required>
+                        <option value="general">General</option>
+                        <option value="projects">Projects</option>
+                        <option value="lnp-prod">LNP Productions</option>
+                        <option value="stelian">Stelian</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+</Layout>
