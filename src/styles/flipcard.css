@@ -94,7 +94,16 @@
   line-height: 1.6;
 }
 
-
+.invisible-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    opacity: .5;
+    z-index: 1;
+}
 
 .card__back {
   transform: rotateY(.5turn);
