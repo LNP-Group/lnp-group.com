@@ -1,3 +1,5 @@
+
+
 header {
     height: calc(100svh - var(--menu-height));
     height: calc(100dvh - var(--menu-height));
@@ -35,6 +37,40 @@ header {
     }
 }
 
+.brands-header {
+    padding: 0.5em;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.brands {
+    padding: 0.5em;
+    background: #000;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .brand-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+
+        img {
+            width: 120px;
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     header {
         .background-image {
@@ -44,4 +80,5 @@ header {
             background-repeat: no-repeat;
         }
     }
+
 }
