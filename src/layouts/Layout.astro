@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Menu from '../components/Menu.astro';
+import { ViewTransitions } from "astro:transitions";
 
 import '../styles/global.scss'
 
@@ -40,6 +41,8 @@ const { title, description, url, lang, image } = Astro.props;
 		<link rel="canonical" href={url} />
 		<link rel="stylesheet" href="https://use.typekit.net/xsr8mot.css">
 		<script src="https://kit.fontawesome.com/a81ac619a8.js" crossorigin="anonymous"></script>
+
+		<ViewTransitions />
 	</head>
 	<body>
 		<Menu />

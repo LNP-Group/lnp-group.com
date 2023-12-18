@@ -30,3 +30,33 @@ import "../styles/menu.scss";
 </div>
 
 <script is:inline src="/scripts/menu.js"></script>
+
+<script>
+    const activePage = window.location.pathname;
+
+    const active = document.querySelector(`a[href="${activePage}"]`);
+
+    if (active) {
+        active.classList.add("active-page");
+    }
+
+    document.addEventListener("astro:after-swap", () => {
+        const activePage = window.location.pathname;
+
+        const active = document.querySelector(`a[href="${activePage}"]`);
+
+        if (active) {
+            active.classList.add("active-page");
+        }
+    });
+
+</script>
+
+<style>
+    .active-page {
+        text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0400e6, 0 0 40px #0400e6, 0 0 50px #0400e6, 0 0 60px #0400e6, 0 0 70px #0400e6;
+    }
+
+
+
+</style>
